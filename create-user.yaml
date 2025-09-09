@@ -1,0 +1,12 @@
+---
+- name: doing some tasks
+   hosts: all
+   tasks:
+          - name: creating user asmit
+             user:
+                    name: asmit
+                    uid: 1200
+                    home: /ltim
+                    shell: /bin/bash
+                    state: present
+...
