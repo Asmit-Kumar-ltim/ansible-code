@@ -1,0 +1,15 @@
+- name: doing some tasks
+   hosts: all
+   tasks:
+          - name: apache install
+             yum:
+                    name: httpd
+                    state: present
+
+          - name: started apache service
+             systemd:
+                    name: httpd
+                    state: started
+                    enabled: true
+
+...   
