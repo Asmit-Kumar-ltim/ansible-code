@@ -1,0 +1,8 @@
+- name: doing some tasks
+   hosts: all
+   tasks:
+      - name: copying
+        copy:
+          src: /etc/fstab
+          dest: /tmp/fstab
+          remote_src: true # this tells ansible to look for the file on the worker node instead of master node
